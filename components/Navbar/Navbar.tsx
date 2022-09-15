@@ -9,7 +9,9 @@ export const Nav = styled.nav`
   justify-content: space-between;
   margin-top: 65px;
 `;
-export const Logo = styled.svg``;
+export const Logo = styled.svg`
+height: 70px;
+`;
 export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
@@ -26,7 +28,9 @@ export const Link = styled.div`
   color: ${GrayishDarkBlue};
 `;
 
+
 const Navbar = () => {
+
     return (
         <Nav>
             <div>

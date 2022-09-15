@@ -19,7 +19,7 @@ export const HeroContent = styled.div`
   position: absolute;
   left: 0%;
   bottom: 0%;
-  height: 357px;
+  height: 373px;
   width: 445px;
   border-radius: 0px;
   background: #fafafa;
@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = (props) => {
                 <HeroImg src={props.src} />
             </HeroImgBox>
             <HeroContent>
-                <H1>Hey, I’m Alex Spencer and I love building beautiful websites</H1>
+                <H1>Hey, I’m Alina and I love building beautiful websites</H1>
                 <Button>
                     <NestedBtn>
                         <SVG xmlns="http://www.w3.org/2000/svg" width="16" height="14">

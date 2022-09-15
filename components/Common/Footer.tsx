@@ -2,7 +2,7 @@
 import React from 'react'
 import { FlexContainer, Logo, Link } from '../Navbar/Navbar';
 import styled from 'styled-components';
-import { GrayishDarkBlue } from './Colors';
+import { GrayishDarkBlue, VeryLightGray } from './Colors';
 import { Row } from './FlexBox';
 
 export const FooterContainer = styled.div`
@@ -18,12 +18,29 @@ export const Icon = styled.svg`
     width: 25px;
     margin: 8px;
 `
+export const FooterLink = styled.div`
+      margin: 10px;
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: ${VeryLightGray};
+`
 const Footer = () => {
+    const color = {
+        color: VeryLightGray
+    }
+    const height = {
+        height: "40px"
+    }
     return (
         <FooterContainer>
             <FooterFlex>
                 <Row>
-                    <Logo xmlns="http://www.w3.org/2000/svg" width="61" height="32">
+                    <Logo style={height} xmlns="http://www.w3.org/2000/svg" width="61" height="32">
                         <path
                             fill="white"
                             fill-rule="evenodd"
@@ -31,9 +48,9 @@ const Footer = () => {
                         />
                     </Logo>
                     <FlexContainer>
-                        <Link>Home</Link>
-                        <Link>Portfolio</Link>
-                        <Link>Contact me</Link>
+                        <Link style={color}>Home</Link>
+                        <Link style={color}>Portfolio</Link>
+                        <Link style={color}>Contact me</Link>
                     </FlexContainer>
                 </Row>
                 <FlexContainer>

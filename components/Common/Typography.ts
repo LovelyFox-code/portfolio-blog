@@ -9,6 +9,7 @@ export const H1 = styled.h1`
   line-height: 50px;
   letter-spacing: -0.446429px;
   color: ${GrayishDarkBlue};
+  margin:50px 50px 50px 0;
 `;
 export const H2 = styled.h2`
   font-family: "Ibarra Real Nova";
