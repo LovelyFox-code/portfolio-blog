@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero src='/images/homepage/desktop/image-homepage-hero@2x.jpg' />
+      <Hero src='/images/homepage/desktop/Light Cream Minimalist New Video Announcement Instagram Story.png' />
       <Main>
         <Row>
           <Column>
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
               // srcSet= 
               sizes="(max-width: 600px) 480px,
             800px"
-              src="/images/homepage/desktop/image-homepage-profile@2x.jpg"
+              src="/images/homepage/desktop/Facetune_07-05-2022-19-17-56.jpg"
               alt=""
             />
           </Column>
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </Column>
         </Row>
         <Row>
-          <H2>Interested in doing <br />a project together?</H2>
+          <H2>Interested in doing a project together?</H2>
           <Divider />
           <Button variant="secondary"> Contact me</Button>
         </Row>
