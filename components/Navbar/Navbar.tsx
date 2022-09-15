@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { GrayishDarkBlue } from "../Common/Colors";
@@ -16,7 +17,7 @@ export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
 `;
-export const Link = styled.div`
+export const StyledLink = styled(Link)`
   margin: 10px;
   font-family: "Public Sans";
   font-style: normal;
@@ -46,9 +47,9 @@ const Navbar = () => {
             </div>
             <div>
                 <FlexContainer>
-                    <Link>Home</Link>
-                    <Link>Portfolio</Link>
-                    <Link>Contact me</Link>
+                    <StyledLink href="/">Home</StyledLink>
+                    <StyledLink href="/">Portfolio</StyledLink>
+                    <StyledLink href="/">Contact me</StyledLink>
                 </FlexContainer>
             </div>
         </Nav>
