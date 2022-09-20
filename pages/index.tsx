@@ -3,24 +3,33 @@ import Head from 'next/head'
 import Button, { NestedBtn, SVG } from '../components/Button'
 import { H1, H2, H3, P } from '../components/Common/Typography'
 import PreviewDescription, { Divider } from '../components/PreviewDescription'
-import ProductCard from '../components/ProductCard'
 import { Row, Column } from '../components/Common/FlexBox'
-import styles from '../styles/Home.module.css'
 import PreviewImage from '../components/PreviewImage'
 import styled from 'styled-components'
 import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
 import Footer from '../components/Common/Footer'
-
+import MainPage from './main'
+import { fetchHomePageContent } from '../contentfulPosts'
+import ProjectPage from './project'
 export const Container = styled.section`
 
 `
 export const Main = styled.div`
   width: 80%;
+  max-width: 1440px;
   margin: auto;
 `
+interface HomePageProps {
+  portfolioPictureURL: string,
+  tagLine: string,
+  aboutMe: string,
+  CTA: string,
 
-const Home: NextPage = () => {
+  // onclick: ()=>void;
+
+}
+const Home: NextPage<HomePageProps> = (props) => {
   return (
     <Container>
       <Head>
@@ -29,14 +38,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <Hero src='/images/homepage/desktop/Light Cream Minimalist New Video Announcement Instagram Story.png' />
+      <Hero src={props.portfolioPictureURL} />
       <Main>
         <Row>
           <Column>
             <PreviewImage
               // srcSet= 
               sizes="(max-width: 600px) 480px,
-            800px"
+              800px"
               src="/images/homepage/desktop/Facetune_07-05-2022-19-17-56.jpg"
               alt=""
             />
@@ -44,18 +53,26 @@ const Home: NextPage = () => {
           <Column>
             <PreviewDescription
               title="About Me"
-              description="I’m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I’m based in London, UK, but I’m happy working remotely and have experience in remote teams. When I’m not coding, you’ll find me outdoors. I love being out in nature whether that’s going for a walk, run or cycling. I’d love you to check out my work."
+              description={props.aboutMe}
               onclick={() => alert("func works")}
             />
           </Column>
         </Row>
+
         <Row>
           <H2>Interested in doing a project together?</H2>
           <Divider />
           <Button variant="secondary"> Contact me</Button>
         </Row>
       </Main>
-
+      {/* <ProjectPage
+        sizes={props.sizes}
+        src={props.src}
+        alt={props.alt}
+        title={props.title}
+        description={props.description}
+        onclick={() => console.log("clicked")}
+      /> */}
       <Footer />
     </Container>
 
@@ -63,3 +80,11 @@ const Home: NextPage = () => {
 }
 
 export default Home
+export async function getStaticProps() {
+  const homePageProps: HomePageProps = await fetchHomePageContent()
+  return {
+    props: {
+      ...homePageProps,
+    },
+  }
+}

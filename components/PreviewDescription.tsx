@@ -1,9 +1,8 @@
-import React from "react";
+import React, { Children } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { GrayishDarkBlue } from "./Common/Colors";
 import { H1, P } from "./Common/Typography";
-
 interface IPreviewDescription {
     title: string;
     description: string;
@@ -29,14 +28,16 @@ export const Divider = styled.hr`
   }
 `;
 
+
 const PreviewDescription: React.FC<IPreviewDescription> = (props) => {
+
     return (
         <Description>
             <Divider />
             <H1>{props.title}</H1>
             <P>{props.description}</P>
             <Button variant="secondary" onClick={props.onclick}>
-                go to portfolio
+                GO TO PORTFOLIO
             </Button>
             <Divider />
         </Description>
