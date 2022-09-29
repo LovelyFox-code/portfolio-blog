@@ -31,13 +31,14 @@ export async function fetchPortfolioPageContent() {
 
 export async function fetchProjects() {
   const entries = await client.getEntries({ content_type: "project" });
-
+  console.log("ENTRIES", entries.items);
   const projects = entries.items.map((project) => {
     return {
       title: project.fields.title,
       projectScreenshot: project.fields.projectScreenshot.fields.file.url,
       id: project.sys.id,
       description: project.fields.description,
+      link: project.fields.visitWebsite,
     };
   });
 
@@ -55,5 +56,6 @@ export async function fetchProjectById(id) {
     description: entry.fields.description,
     previewImg: entry.fields.staticPreview[0].fields.file.url,
     previewImage: entry.fields.staticPreview[1].fields.file.url,
+    link: entry.fields.visitWebsite,
   };
 }

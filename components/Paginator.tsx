@@ -2,9 +2,9 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
-import { GrayishDarkBlue, LightGray } from "./Common/Colors";
-import { Row, Section } from "./Common/FlexBox";
-import { H1, H3, P } from "./Common/Typography";
+import { LightGray } from "./Common/Colors";
+import { Section } from "./Common/FlexBox";
+import { H3, P } from "./Common/Typography";
 
 interface IPaginator {
     title: string

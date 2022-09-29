@@ -1,15 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Button, { NestedBtn, SVG } from '../components/Button'
-import { H1, H2, H3, P } from '../components/Common/Typography'
+import Button from '../components/Button'
+import { H2 } from '../components/Common/Typography'
 import PreviewDescription, { Divider } from '../components/PreviewDescription'
-import { Row, Column, Section } from '../components/Common/FlexBox'
+import { Row, Column, Section, RowSpaceBetween } from '../components/Common/FlexBox'
 import PreviewImage from '../components/PreviewImage'
 import styled from 'styled-components'
-import Navbar from '../components/Navbar/Navbar'
 import Hero from '../components/Hero/Hero'
-import Footer from '../components/Common/Footer'
 import { fetchHomePageContent } from '../fetchContentful'
+
 export const Container = styled.section`
 
 `
@@ -23,7 +22,6 @@ interface HomePageProps {
   aboutMe: string,
   CTA: string,
   id: string
-  // onclick: ()=>void;
 
 }
 const Home: NextPage<HomePageProps> = (props) => {
@@ -61,11 +59,11 @@ const Home: NextPage<HomePageProps> = (props) => {
 
         </Section>
         <Section>
-          <Row>
+          <RowSpaceBetween>
             <H2>Interested in doing a project together?</H2>
             <Divider />
             <Button variant="secondary"> Contact me</Button>
-          </Row>
+          </RowSpaceBetween>
         </Section>
       </Main>
 

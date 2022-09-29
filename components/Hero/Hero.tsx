@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = (props) => {
                     <Button>
                         <NestedBtn>
                             <SVG xmlns="http://www.w3.org/2000/svg" width="16" height="14">
-                                <g fill="none" fill-rule="evenodd" stroke="#5FB4A2">
+                                <g fill="none" fillRule="evenodd" stroke="#5FB4A2">
                                     <path d="M0 9l8 4 8-4" />
                                     <path opacity=".7" d="M0 5l8 4 8-4" />
                                     <path opacity=".25" d="M0 1l8 4 8-4" />
