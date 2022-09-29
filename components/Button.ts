@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 import {Cyan, DarkBlue, GrayishDarkBlue, VeryLightGray} from './Common/Colors'
 
 interface IButton {
-    variant?: "primary" | "secondary" | "attached" 
+    variant?: "primary" | "secondary" | "attached" | "paginator"
 }
 export const NestedBtn = styled.div`
   position: absolute;
@@ -69,7 +69,18 @@ const Button = styled.button<IButton>`
             color: white;
         }
         `
-    }
+    }if(props.variant === "paginator"){
+      return css`
+      padding: 16px 22px;
+      background-color: white;
+      display: flex;
+      max-width: 400px;
+      &:hover{
+          background-color: white;
+          color: ${DarkBlue};
+      }
+      `
+  }
 
 
   }}

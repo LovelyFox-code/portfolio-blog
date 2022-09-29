@@ -1,13 +1,16 @@
-import React from "react";
+import Link from "next/link";
+import React, { Children } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { GrayishDarkBlue } from "./Common/Colors";
 import { H1, P } from "./Common/Typography";
-
 interface IPreviewDescription {
     title: string;
     description: string;
-    onclick: () => void;
+    heroProjectScreenshot?: string;
+    projectBackground?: string;
+    technologies?: string;
+    id: string;
 }
 export const Description = styled.div`
     width: 80%;
@@ -29,14 +32,17 @@ export const Divider = styled.hr`
   }
 `;
 
+
 const PreviewDescription: React.FC<IPreviewDescription> = (props) => {
     return (
         <Description>
             <Divider />
             <H1>{props.title}</H1>
             <P>{props.description}</P>
-            <Button variant="secondary" onClick={props.onclick}>
-                go to portfolio
+            <Button variant="secondary" >
+                <Link href={"/projects"}>
+                    <a>GO TO PORTFOLIO</a>
+                </Link>
             </Button>
             <Divider />
         </Description>
