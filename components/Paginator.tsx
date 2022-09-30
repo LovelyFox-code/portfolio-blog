@@ -24,9 +24,11 @@ const VerticalDivider = styled.div`
 `
 const BorderPaginator = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     border-top: 1px solid ${LightGray};
     border-bottom: 1px solid ${LightGray};
+    width: 100%;
 `
 
 const Paginator: React.FC<IPaginator> = (props) => {
