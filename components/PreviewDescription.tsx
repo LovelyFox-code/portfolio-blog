@@ -17,7 +17,7 @@ export const Description = styled.div`
     margin: auto;
 `
 export const Divider = styled.hr`
-  width: 350px;
+  width: 100%;
   height: 1px;
   left: 830px;
   top: 190px;

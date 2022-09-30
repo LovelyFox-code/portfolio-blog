@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Button, { NestedBtn, SVG } from '../../components/Button'
 import { H1, H2, P } from '../../components/Common/Typography'
 import PreviewDescription, { Divider } from '../../components/PreviewDescription'
-import { Row, Column, Section, Div60 } from '../../components/Common/FlexBox'
+import { Row, Column, Section, DivDescription } from '../../components/Common/FlexBox'
 import PreviewImage from '../../components/PreviewImage'
 import styled from 'styled-components'
 import Hero from '../../components/Hero/Hero'
@@ -45,7 +45,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = (props) => {
               />
             </Column>
             <Column>
-              <Div60>
+              <DivDescription>
                 <Divider />
                 <H1>{project.title}</H1>
                 <P>{project.description}</P>
@@ -54,7 +54,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = (props) => {
                     <a>GO TO PORTFOLIO</a>
                   </Link>
                 </Button>
-              </Div60>
+              </DivDescription>
             </Column>
           </Row>
         </Section>

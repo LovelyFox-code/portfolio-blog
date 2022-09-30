@@ -3,16 +3,22 @@ import { FlexContainer, Logo, StyledLink } from "../Navbar/Navbar";
 import styled from "styled-components";
 import { GrayishDarkBlue, VeryLightGray } from "./Colors";
 import { Row } from "./FlexBox";
+import { mediaQueries } from "./media";
 
 export const FooterContainer = styled.div`
   background-color: ${GrayishDarkBlue};
 `;
 export const FooterFlex = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   max-width: 1140px;
   margin: auto;
   justify-content: space-between;
+  ${mediaQueries("md")`
+    justify-content: center;
+  `};
+
 `;
 export const Icon = styled.svg`
   width: 25px;
