@@ -2,14 +2,11 @@ import PreviewDescription, {
     Divider,
 } from "../../components/PreviewDescription";
 import { Row, Column, Section, Div80 } from "../../components/Common/FlexBox";
-import PreviewImage, { Image, ImageBox } from "../../components/PreviewImage";
-import styled from "styled-components";
+import { Image, ImageBox } from "../../components/PreviewImage";
 import { GetStaticPropsContext, NextPage } from "next";
 import { fetchProjectById, fetchProjects } from "../../fetchContentful";
-import axios from "axios";
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
-import Hero, { HeroImg, HeroImgBox } from "../../components/Hero/Hero";
-import { H1, H2, H3, P } from "../../components/Common/Typography";
+import { HeroImg, HeroImgBox } from "../../components/Hero/Hero";
+import { H1, H3, P } from "../../components/Common/Typography";
 import Button from "../../components/Button";
 import Paginator from "../../components/Paginator";
 
@@ -67,13 +64,7 @@ const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
                 </Row>
             </Section>
             <Paginator title={props.project.title} />
-            <Section>
-                <Row>
-                    <H2>Interested in doing a project together?</H2>
-                    <Divider />
-                    <Button variant="secondary"> Contact me</Button>
-                </Row>
-            </Section>
+
 
         </>
     );
