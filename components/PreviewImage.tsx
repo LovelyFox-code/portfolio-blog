@@ -13,6 +13,8 @@ export const Image = styled.img`
 export const ImageBox = styled.div`
     width: 80%;
     margin: auto;
+    margin-top: 10%;
+   
 `
 const PreviewImage: React.FC<IPreviewSet> = (props) => {
     return (

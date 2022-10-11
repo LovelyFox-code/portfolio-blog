@@ -1,12 +1,14 @@
 export const breakpoints = {
-    sm: 20,
-    md: 30,
-    lg: 45,
-    xl: 60
+    mobileS: 375,
+    mobileL: 425,
+    tablet: 768,
+    laptop: 1024,
+    laptopL: 1440
+
   };
   
   export const mediaQueries = (key: keyof typeof breakpoints) => {
     return (style: TemplateStringsArray | String) =>
-      `@media (max-width: ${breakpoints[key]}em) { ${style} }`;
+      `@media (max-width: ${breakpoints[key]}px) { ${style} }`;
   };
   

@@ -11,7 +11,7 @@ export const H1 = styled.h1`
   letter-spacing: -0.446429px;
   color: ${GrayishDarkBlue};
   margin:50px 50px 50px 0;
-  ${mediaQueries("md")`
+  ${mediaQueries("mobileL")`
      font-size: 40px;
   `};
 
@@ -33,7 +33,7 @@ export const H3 = styled.h3`
   line-height: 36px;
   letter-spacing: -0.285714px;
   color: ${GrayishDarkBlue};
-  ${mediaQueries("md")`
+  ${mediaQueries("mobileL")`
      font-size: 21px;
   `};
 `;

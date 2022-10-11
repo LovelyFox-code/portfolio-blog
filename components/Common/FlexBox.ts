@@ -13,9 +13,11 @@ align-items: center;
 `
 export const Column = styled.div`
   flex: 50%;
-  ${mediaQueries("lg")`
+  
+  ${mediaQueries("mobileL")`
     flex: 100%
     width: 100%
+    background-color: red;
   `};
 
 `
@@ -24,10 +26,10 @@ export const Section = styled.section`
 margin: auto auto 10% auto ;
 width: 80%;
 max-width: 1440px;
-${mediaQueries("lg")`
+${mediaQueries("tablet")`
     width: 90%
   `};
-  ${mediaQueries("md")`
+  ${mediaQueries("mobileL")`
     width: 100%
   `};
 
@@ -36,10 +38,10 @@ ${mediaQueries("lg")`
 export const DivDescription = styled.div`
 width: 60%;
 margin: auto;
-${mediaQueries("lg")`
+${mediaQueries("tablet")`
     width: 80%
   `};
-  ${mediaQueries("md")`
+  ${mediaQueries("mobileL")`
     width: 90%
   `};
 `
