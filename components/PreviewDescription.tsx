@@ -16,11 +16,9 @@ export const Description = styled.div`
     width: 80%;
     margin: auto;
 `
-export const Divider = styled.hr`
-  width: 100%;
+export const Divider = styled.div`
+  width: 534px;
   height: 1px;
-  left: 830px;
-  top: 190px;
   background: ${GrayishDarkBlue};
   mix-blend-mode: normal;
   opacity: 0.15;
