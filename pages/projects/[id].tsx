@@ -1,4 +1,4 @@
-import PreviewDescription, {
+import {
     Divider,
 } from "../../components/PreviewDescription";
 import { Row, Column, Section, Div80 } from "../../components/Common/FlexBox";
@@ -24,13 +24,18 @@ type ProjectDetailsPage = {
     alt: string;
     id: string;
     link: string;
+    prevProjectTitle: string;
+    nextProjectTitle: string;
+    prevProjectId: string;
+    nextProjectId: string;
 }
+
 interface ProjectDetailsPageProps {
-    project: ProjectDetailsPage
+    project: ProjectDetailsPage;
+
 }
 
 const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
-    console.log(props.project.link);
 
     return (
         <>
@@ -63,7 +68,12 @@ const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
                     </Column>
                 </Row>
             </Section>
-            <Paginator title={props.project.title} />
+            <Paginator
+                prevProjectTitle={props.project.prevProjectTitle}
+                nextProjectTitle={props.project.nextProjectTitle}
+                prevProjectId={props.project.prevProjectId}
+                nextProjectId={props.project.nextProjectId}
+            />
 
 
         </>
@@ -86,7 +96,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 export async function getStaticPaths() {
     const projects = await fetchProjects();
     const paths = projects.map(({ id }) => ({ params: { id: id.toString() } }));
-    // console.log("PATHS", paths);
+
     return {
         paths,
         fallback: false,

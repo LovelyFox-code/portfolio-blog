@@ -34,7 +34,6 @@ ${mediaQueries("tablet")`
   `};
 
 `
-
 export const DivDescription = styled.div`
 width: 60%;
 margin: auto;
