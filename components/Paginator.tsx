@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
@@ -7,9 +8,12 @@ import { Section } from "./Common/FlexBox";
 import { H3, P } from "./Common/Typography";
 
 interface IPaginator {
-    title: string
+    prevProjectTitle: string
+    nextProjectTitle: string
+    prevProjectId: string
+    nextProjectId: string
 }
-const Float = styled.div`
+const Box = styled.a`
       &:first-child{
       text-align: right;
   }
@@ -38,17 +42,17 @@ const Paginator: React.FC<IPaginator> = (props) => {
             <BorderPaginator>
                 <Button variant="paginator">
                     <h1> - </h1>
-                    <Float>
-                        <H3>{props.title}</H3>
+                    <Box href={`/projects/${encodeURIComponent(props.prevProjectId)}`}>
+                        <H3>{props.prevProjectTitle}</H3>
                         <P>Previous Project</P>
-                    </Float>
+                    </Box>
                 </Button>
                 <VerticalDivider />
                 <Button variant="paginator">
-                    <Float>
-                        <H3>{props.title}</H3>
+                    <Box href={`/projects/${encodeURIComponent(props.nextProjectId)}`}>
+                        <H3>{props.nextProjectTitle}</H3>
                         <P>Next Project</P>
-                    </Float>
+                    </Box>
                     <h1>-</h1>
                 </Button>
             </BorderPaginator>
