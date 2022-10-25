@@ -34,27 +34,27 @@ const Home: NextPage<HomePageProps> = (props) => {
       <Section>
         <Hero src={props.portfolioPictureURL} />
       </Section>
-      <Main>
-        <Section>
-          <Row>
-            <Column>
-              <PreviewImage
-                // srcSet= 
-                sizes="(max-width: 600px) 480px,
+
+      <Section>
+        <Row>
+          <Column>
+            <PreviewImage
+              // srcSet= 
+              sizes="(max-width: 600px) 480px,
               800px"
-                src="/images/homepage/desktop/Facetune_07-05-2022-19-17-56.jpg"
-                alt=""
-              />
-            </Column>
-            <Column>
-              <PreviewDescription
-                title="About Me"
-                description={props.aboutMe} id={props.id}
-              />
-            </Column>
-          </Row>
-        </Section>
-      </Main>
+              src="/images/homepage/desktop/Facetune_07-05-2022-19-17-56.jpg"
+              alt=""
+            />
+          </Column>
+          <Column>
+            <PreviewDescription
+              title="About Me"
+              description={props.aboutMe} id={props.id}
+            />
+          </Column>
+        </Row>
+      </Section>
+
     </Container>
 
   )

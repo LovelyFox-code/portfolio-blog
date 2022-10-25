@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components';
 import {Cyan, DarkBlue, GrayishDarkBlue, VeryLightGray} from './Common/Colors'
+import { mediaQueriesMax } from './Common/media';
 
 interface IButton {
     variant?: "primary" | "secondary" | "attached" | "paginator"
@@ -9,7 +10,7 @@ export const NestedBtn = styled.div`
   left: 0%;
   top: 0%;
   bottom: 0%;
-  background-color: #1d3444;;
+  background-color: #1d3444;
   padding: 16px 18px;
   text-align: center;
 `
@@ -71,14 +72,18 @@ const Button = styled.button<IButton>`
         `
     }if(props.variant === "paginator"){
       return css`
-      padding: 16px 22px;
+      padding: 22px 0;
       background-color: white;
       display: flex;
       max-width: 400px;
+      text-transform: none;
       &:hover{
           background-color: white;
           color: ${DarkBlue};
       }
+      ${mediaQueriesMax("tablet")`
+        max-width: 200px;
+  `};
       `
   }
 

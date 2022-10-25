@@ -3,20 +3,22 @@ import { FlexContainer, Logo, StyledLink } from "../Navbar/Navbar";
 import styled from "styled-components";
 import { GrayishDarkBlue, VeryLightGray } from "./Colors";
 import { Row } from "./FlexBox";
-import { mediaQueries } from "./media";
+import { mediaQueriesMax } from "./media";
 
 export const FooterContainer = styled.div`
   background-color: ${GrayishDarkBlue};
+  padding: 30px;
 `;
 export const FooterFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
   max-width: 1140px;
   margin: auto;
   justify-content: space-between;
-  ${mediaQueries("mobileL")`
+  ${mediaQueriesMax("tablet")`
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   `};
 
 `;
@@ -45,35 +47,34 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterFlex>
-                <Row>
-                    <Logo style={height}>
-                        <a href="https://github.com/LovelyFox-code">
-                            <svg
+                <Logo style={height}>
+                    <a href="https://github.com/LovelyFox-code">
+                        <svg
 
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="61"
-                                height="32"
-                            >
-                                <path
-                                    fill="white"
-                                    fillRule="evenodd"
-                                    d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"
-                                />
-                            </svg>
-                        </a>
-                    </Logo>
-                    <FlexContainer>
-                        <StyledLink href="" style={color}>
-                            Home
-                        </StyledLink>
-                        <StyledLink href="" style={color}>
-                            Portfolio
-                        </StyledLink>
-                        <StyledLink href="" style={color}>
-                            Contact me
-                        </StyledLink>
-                    </FlexContainer>
-                </Row>
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="61"
+                            height="32"
+                        >
+                            <path
+                                fill="white"
+                                fillRule="evenodd"
+                                d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"
+                            />
+                        </svg>
+                    </a>
+                </Logo>
+                <FlexContainer>
+                    <StyledLink href="/" style={color}>
+                        Home
+                    </StyledLink>
+                    <StyledLink href="" style={color}>
+                        Portfolio
+                    </StyledLink>
+                    <StyledLink href="" style={color}>
+                        Contact me
+                    </StyledLink>
+                </FlexContainer>
+
                 <FlexContainer>
                     <a href="https://github.com/LovelyFox-code">
                         <Icon xmlns="http://www.w3.org/2000/svg" width="25" height="24">

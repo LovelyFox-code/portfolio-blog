@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQueries } from "./media";
+import { mediaQueriesMax } from "./media";
 
 export const Row = styled.div`
   display: flex;
@@ -12,12 +12,10 @@ justify-content: space-between;
 align-items: center;
 `
 export const Column = styled.div`
-  flex: 50%;
+  width: 50%;
   
-  ${mediaQueries("mobileL")`
-    flex: 100%
-    width: 100%
-    background-color: red;
+  ${mediaQueriesMax("tablet")`
+    width: 100%;
   `};
 
 `
@@ -26,21 +24,21 @@ export const Section = styled.section`
 margin: auto auto 10% auto ;
 width: 80%;
 max-width: 1440px;
-${mediaQueries("tablet")`
+${mediaQueriesMax("tablet")`
     width: 90%
   `};
-  ${mediaQueries("mobileL")`
-    width: 100%
+  ${mediaQueriesMax("mobileL")`
+    width: 95%
   `};
 
 `
 export const DivDescription = styled.div`
 width: 60%;
 margin: auto;
-${mediaQueries("tablet")`
+${mediaQueriesMax("tablet")`
     width: 80%
   `};
-  ${mediaQueries("mobileL")`
+  ${mediaQueriesMax("mobileL")`
     width: 90%
   `};
 `

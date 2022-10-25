@@ -7,8 +7,12 @@ export const breakpoints = {
 
   };
   
-  export const mediaQueries = (key: keyof typeof breakpoints) => {
+  export const mediaQueriesMax = (key: keyof typeof breakpoints) => {
     return (style: TemplateStringsArray | String) =>
       `@media (max-width: ${breakpoints[key]}px) { ${style} }`;
+  };
+  export const mediaQueriesMin = (key: keyof typeof breakpoints) => {
+    return (style: TemplateStringsArray | String) =>
+      `@media (min-width: ${breakpoints[key]}px) { ${style} }`;
   };
   

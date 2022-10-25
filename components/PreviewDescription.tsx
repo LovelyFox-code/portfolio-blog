@@ -3,6 +3,7 @@ import React, { Children } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { GrayishDarkBlue } from "./Common/Colors";
+import { mediaQueriesMax, mediaQueriesMin } from "./Common/media";
 import { H1, P } from "./Common/Typography";
 interface IPreviewDescription {
     title: string;
@@ -15,9 +16,11 @@ interface IPreviewDescription {
 export const Description = styled.div`
     width: 80%;
     margin: auto;
+    ${mediaQueriesMax("tablet")`
+    width: 95%;
+  `};
 `
 export const Divider = styled.div`
-  width: 534px;
   height: 1px;
   background: ${GrayishDarkBlue};
   mix-blend-mode: normal;

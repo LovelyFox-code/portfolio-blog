@@ -1,7 +1,8 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { GrayishDarkBlue } from "../Common/Colors";
+import { GrayishDarkBlue, VeryLightGray } from "../Common/Colors";
+import { mediaQueriesMax } from "../Common/media";
 
 export const Nav = styled.nav`
   width: 80%;
@@ -27,12 +28,49 @@ export const StyledLink = styled.a`
   line-height: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: ${GrayishDarkBlue};
+  
 `;
+export const NavLinks = styled.div`
+color: ${GrayishDarkBlue};
+      ${mediaQueriesMax("mobileL")`
+     display: none;
+  `};
+`
+export const HamburgerMenu = styled.div`
+display: none;
+          ${mediaQueriesMax("mobileL")`
+        display: inline;
+        position: absolute;
+        right: 10%;
+        z-index: 999;
+  `};
+`
+export const FlexHamburger = styled.div`
+    display: flex;
+    flex-direction: column;
+    color: ${VeryLightGray};
+    background-color: ${GrayishDarkBlue};
+`
+export const Box = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    & svg{
+        margin-bottom: 30px;
+    }
+    
+`
 
+interface INavbar {
 
-const Navbar = () => {
+    onClick?: React.MouseEventHandler<HTMLDivElement> | undefined
+}
 
+const Navbar: React.FC<INavbar> = (props) => {
+    const [open, setIsOpen] = useState(true);
+    function switcher() {
+        setIsOpen(!open)
+    }
     return (
         <Nav>
             <div>
@@ -48,13 +86,24 @@ const Navbar = () => {
                     </StyledLink>
                 </Logo>
             </div>
-            <div>
+            <NavLinks>
                 <FlexContainer>
                     <StyledLink href="/">Home</StyledLink>
                     <StyledLink href="/projects">Portfolio</StyledLink>
                     <StyledLink href="/">Contact me</StyledLink>
                 </FlexContainer>
-            </div>
+            </NavLinks>
+            <HamburgerMenu onClick={() => switcher()}>
+                {open ? <svg xmlns="http://www.w3.org/2000/svg" width="24" height="13"><g fill="#33323D" fillRule="evenodd"><path d="M0 0h24v1H0zM0 6h24v1H0zM0 12h24v1H0z" /></g></svg> : <Box>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"><path fill="#33323D" fillRule="evenodd" d="M17.132.661l.707.707L9.707 9.5l8.132 8.132-.707.707L9 10.207.868 18.34l-.707-.707L8.293 9.5.161 1.368.868.661 9 8.793 17.132.661z" /></svg>
+                    <FlexHamburger>
+                        <StyledLink href="/">Home</StyledLink>
+                        <StyledLink href="/projects">Portfolio</StyledLink>
+                        <StyledLink href="/">Contact me</StyledLink>
+                    </FlexHamburger>
+                </Box>}
+
+            </HamburgerMenu>
         </Nav>
     );
 };

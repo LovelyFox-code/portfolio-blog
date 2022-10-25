@@ -23,7 +23,8 @@ const Box = styled.a`
 `
 const VerticalDivider = styled.div`
     width: 1px;
-    height: 100%;
+    min-height: 130px;
+    max-width: 146px;
     background-color: ${LightGray};
 `
 const BorderPaginator = styled.div`
@@ -41,7 +42,6 @@ const Paginator: React.FC<IPaginator> = (props) => {
         <Section>
             <BorderPaginator>
                 <Button variant="paginator">
-                    <h1> - </h1>
                     <Box href={`/projects/${encodeURIComponent(props.prevProjectId)}`}>
                         <H3>{props.prevProjectTitle}</H3>
                         <P>Previous Project</P>
@@ -53,7 +53,6 @@ const Paginator: React.FC<IPaginator> = (props) => {
                         <H3>{props.nextProjectTitle}</H3>
                         <P>Next Project</P>
                     </Box>
-                    <h1>-</h1>
                 </Button>
             </BorderPaginator>
         </Section>
