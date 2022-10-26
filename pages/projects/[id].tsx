@@ -1,7 +1,7 @@
 import {
     Divider,
 } from "../../components/PreviewDescription";
-import { Row, Column, Section, Div80 } from "../../components/Common/FlexBox";
+import { Row, Column, Section } from "../../components/Common/FlexBox";
 import { Image, ImageBox } from "../../components/PreviewImage";
 import { GetStaticPropsContext, NextPage } from "next";
 import { fetchProjectById, fetchProjects } from "../../fetchContentful";
