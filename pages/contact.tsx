@@ -7,7 +7,6 @@ export const FormWraper = styled.div`
     width: 90%;
     margin: auto;
     margin-bottom: 10%;
-
 `
 
 const ContactPage = () => {
