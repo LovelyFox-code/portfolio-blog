@@ -4,7 +4,8 @@ import { H1 } from "../components/Common/Typography"
 import Form from "../components/Form"
 
 export const FormWraper = styled.div`
-    width: 90%;
+    width: 300px;
+    max-width: 400px;
     margin: auto;
     margin-bottom: 10%;
 `

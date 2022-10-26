@@ -7,9 +7,11 @@ interface IForm {
 
 }
 export const FormBody = styled.div`
-        display: flex;
+        
+    display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 `
 export const FormGroup = styled.div`
     display: block;
