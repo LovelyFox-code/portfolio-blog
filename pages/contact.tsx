@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Button from "../components/Button"
 import { H1 } from "../components/Common/Typography"
-import Form from "../components/form"
+import Form from "../components/Form"
 
 export const FormWraper = styled.div`
     width: 90%;
