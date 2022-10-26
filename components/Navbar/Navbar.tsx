@@ -90,7 +90,7 @@ const Navbar: React.FC<INavbar> = (props) => {
                 <FlexContainer>
                     <StyledLink href="/">Home</StyledLink>
                     <StyledLink href="/projects">Portfolio</StyledLink>
-                    <StyledLink href="/">Contact me</StyledLink>
+                    <StyledLink href="/contact">Contact me</StyledLink>
                 </FlexContainer>
             </NavLinks>
             <HamburgerMenu onClick={() => switcher()}>
@@ -99,7 +99,7 @@ const Navbar: React.FC<INavbar> = (props) => {
                     <FlexHamburger>
                         <StyledLink href="/">Home</StyledLink>
                         <StyledLink href="/projects">Portfolio</StyledLink>
-                        <StyledLink href="/">Contact me</StyledLink>
+                        <StyledLink href="/contact">Contact me</StyledLink>
                     </FlexHamburger>
                 </Box>}
 

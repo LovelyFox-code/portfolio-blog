@@ -42,7 +42,3 @@ ${mediaQueriesMax("tablet")`
     width: 90%
   `};
 `
-export const Div80 = styled.div`
-width: 80%;
-margin: auto;
-`
