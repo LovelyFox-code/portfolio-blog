@@ -14,11 +14,13 @@ interface IPaginator {
     nextProjectId: string
 }
 const Box = styled.a`
-      &:first-child{
-      text-align: right;
-  }
+display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
   &:last-child{
-    text-align: left;
+    text-align: right;
   }
 `
 const VerticalDivider = styled.div`

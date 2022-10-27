@@ -12,9 +12,7 @@ export const Image = styled.img`
   width: 100%;
 `;
 export const ImageBox = styled.div`
-    width: 80%;
-    margin: auto;
-    margin-top: 10%;
+    
     ${mediaQueriesMax("tablet")`
     width: 95%;
   `};
