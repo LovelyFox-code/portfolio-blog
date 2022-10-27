@@ -9,7 +9,7 @@ const CTAsection = () => {
             <RowSpaceBetween>
                 <H2>Interested in doing a project together?</H2>
                 <Divider />
-                <Button variant="secondary"> Contact me</Button>
+                <Button variant="secondary"><a href="/contact">Contact me</a> </Button>
             </RowSpaceBetween>
         </Section>
     )

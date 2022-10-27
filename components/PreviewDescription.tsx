@@ -14,8 +14,9 @@ interface IPreviewDescription {
     id: string;
 }
 export const Description = styled.div`
-    width: 80%;
+    width: 90%;
     margin: auto;
+    max-width: 100%;
     ${mediaQueriesMax("tablet")`
     width: 95%;
   `};

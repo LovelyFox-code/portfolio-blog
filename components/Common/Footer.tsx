@@ -14,6 +14,7 @@ export const FooterFlex = styled.div`
   flex-wrap: wrap;
   max-width: 1140px;
   margin: auto;
+  gap: 40px;
   justify-content: space-between;
   ${mediaQueriesMax("tablet")`
     justify-content: center;
@@ -26,7 +27,7 @@ export const Icon = styled.svg`
   width: 25px;
   margin: 8px;
 `;
-export const FooterLink = styled.div`
+export const FooterLink = styled.a`
   margin: 10px;
   font-family: "Public Sans";
   font-style: normal;
@@ -63,17 +64,17 @@ const Footer = () => {
                         </svg>
                     </a>
                 </Logo>
-                <FlexContainer>
-                    <StyledLink href="/" style={color}>
+                <FooterFlex>
+                    <FooterLink href="/" style={color}>
                         Home
-                    </StyledLink>
-                    <StyledLink href="" style={color}>
+                    </FooterLink>
+                    <FooterLink href="/projects" style={color}>
                         Portfolio
-                    </StyledLink>
-                    <StyledLink href="" style={color}>
+                    </FooterLink>
+                    <FooterLink href="/contact" style={color}>
                         Contact me
-                    </StyledLink>
-                </FlexContainer>
+                    </FooterLink>
+                </FooterFlex>
 
                 <FlexContainer>
                     <a href="https://github.com/LovelyFox-code">

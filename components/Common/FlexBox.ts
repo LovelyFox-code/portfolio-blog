@@ -10,6 +10,8 @@ export const RowSpaceBetween = styled.div`
 display: flex;
 justify-content: space-between;
 align-items: center;
+flex-wrap: wrap;
+    gap: 30px;
 `
 export const Column = styled.div`
   width: 50%;
@@ -22,7 +24,7 @@ export const Column = styled.div`
 
 export const Section = styled.section`
 margin: auto auto 10% auto ;
-width: 80%;
+width: 90%;
 max-width: 1440px;
 ${mediaQueriesMax("tablet")`
     width: 90%
@@ -33,12 +35,10 @@ ${mediaQueriesMax("tablet")`
 
 `
 export const DivDescription = styled.div`
-width: 60%;
+width: 90%;
 margin: auto;
-${mediaQueriesMax("tablet")`
-    width: 80%
-  `};
+
   ${mediaQueriesMax("mobileL")`
-    width: 90%
+    width: 100%
   `};
 `

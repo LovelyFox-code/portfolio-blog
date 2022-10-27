@@ -5,12 +5,12 @@ import { GrayishDarkBlue, VeryLightGray } from "../Common/Colors";
 import { mediaQueriesMax } from "../Common/media";
 
 export const Nav = styled.nav`
-  width: 80%;
+  width: 90%;
   max-width: 1440px;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 65px;
+  margin-top: 10%;
 `;
 export const Logo = styled.div`
 height: 70px;
@@ -18,9 +18,10 @@ height: 70px;
 export const FlexContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `;
 export const StyledLink = styled.a`
-  margin: 10px;
+  /* margin: 10px; */
   font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
@@ -41,7 +42,7 @@ display: none;
           ${mediaQueriesMax("mobileL")`
         display: inline;
         position: absolute;
-        right: 10%;
+        right: 6%;
         z-index: 999;
   `};
 `
@@ -50,6 +51,8 @@ export const FlexHamburger = styled.div`
     flex-direction: column;
     color: ${VeryLightGray};
     background-color: ${GrayishDarkBlue};
+    gap: 15px;
+    padding: 15px;
 `
 export const Box = styled.div`
     display: flex;
