@@ -53,7 +53,7 @@ const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
                             {props.project.description}
                         </P>
                         <P>{props.project.technologies}</P>
-                        <Button><a href={props.project.link}>VISIT WEBSITE</a></Button>
+                        <Button><a target="_blank" rel="noreferrer" href={props.project.link}>VISIT WEBSITE</a></Button>
                     </Column>
                     <Column>
                         <ImageBox>
