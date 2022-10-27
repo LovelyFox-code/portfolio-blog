@@ -1,8 +1,6 @@
-# Frontend Mentor - Portfolio
-
 Took the design from Frontent Mentor as a inspiration for my portfolio website.
 
-### Converting Figma design with `Next.js`, `TypeScript`, `styled-components`, `Contentful`.
+### Portfolio website `Next.js`, `TypeScript`, `styled-components`, `Contentful`.
 
 My goals were:
 
@@ -22,7 +20,9 @@ My goals were:
 ### Built with
 
 - Next.js
-- CSS custom properties
+- Styled-components
+- React
+- TypeScript
 - Flex-box
 - CSS Grid
 - [Next.js](https://nextjs.org/) - Next.js
