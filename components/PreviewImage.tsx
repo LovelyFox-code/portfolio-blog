@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mediaQueriesMax, mediaQueriesMin } from './Common/media'
 interface IPreviewSet {
     // srcSet: string
     sizes: string
@@ -11,8 +12,11 @@ export const Image = styled.img`
   width: 100%;
 `;
 export const ImageBox = styled.div`
-    width: 80%;
-    margin: auto;
+    
+    ${mediaQueriesMax("tablet")`
+    width: 95%;
+  `};
+   
 `
 const PreviewImage: React.FC<IPreviewSet> = (props) => {
     return (

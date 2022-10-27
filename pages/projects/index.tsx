@@ -1,12 +1,10 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Button, { NestedBtn, SVG } from '../../components/Button'
-import { H1, H2, P } from '../../components/Common/Typography'
-import PreviewDescription, { Divider } from '../../components/PreviewDescription'
-import { Row, Column, Section, Div60 } from '../../components/Common/FlexBox'
+import Button from '../../components/Button'
+import { H1, P } from '../../components/Common/Typography'
+import { Divider } from '../../components/PreviewDescription'
+import { Row, Column, Section, DivDescription } from '../../components/Common/FlexBox'
 import PreviewImage from '../../components/PreviewImage'
 import styled from 'styled-components'
-import Hero from '../../components/Hero/Hero'
 import { fetchProjects } from '../../fetchContentful'
 import Link from 'next/link'
 export const Container = styled.section`
@@ -45,7 +43,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = (props) => {
               />
             </Column>
             <Column>
-              <Div60>
+              <DivDescription>
                 <Divider />
                 <H1>{project.title}</H1>
                 <P>{project.description}</P>
@@ -54,17 +52,11 @@ const ProjectsPage: NextPage<ProjectsPageProps> = (props) => {
                     <a>GO TO PORTFOLIO</a>
                   </Link>
                 </Button>
-              </Div60>
+              </DivDescription>
             </Column>
           </Row>
         </Section>
       })}
-
-      <Row>
-        <H2>Interested in doing a project together?</H2>
-        <Divider />
-        <Button variant="secondary"> Contact me</Button>
-      </Row>
     </Main>
 
 

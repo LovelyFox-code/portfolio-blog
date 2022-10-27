@@ -1,15 +1,12 @@
-import PreviewDescription, {
+import {
     Divider,
 } from "../../components/PreviewDescription";
-import { Row, Column, Section, Div80 } from "../../components/Common/FlexBox";
-import PreviewImage, { Image, ImageBox } from "../../components/PreviewImage";
-import styled from "styled-components";
+import { Row, Column, Section } from "../../components/Common/FlexBox";
+import { Image, ImageBox } from "../../components/PreviewImage";
 import { GetStaticPropsContext, NextPage } from "next";
 import { fetchProjectById, fetchProjects } from "../../fetchContentful";
-import axios from "axios";
-import { ReactElement, JSXElementConstructor, ReactFragment, ReactPortal } from "react";
-import Hero, { HeroImg, HeroImgBox } from "../../components/Hero/Hero";
-import { H1, H2, H3, P } from "../../components/Common/Typography";
+import { HeroImg, HeroImgBox } from "../../components/Hero/Hero";
+import { H1, H3, P } from "../../components/Common/Typography";
 import Button from "../../components/Button";
 import Paginator from "../../components/Paginator";
 
@@ -27,13 +24,18 @@ type ProjectDetailsPage = {
     alt: string;
     id: string;
     link: string;
+    prevProjectTitle: string;
+    nextProjectTitle: string;
+    prevProjectId: string;
+    nextProjectId: string;
 }
+
 interface ProjectDetailsPageProps {
-    project: ProjectDetailsPage
+    project: ProjectDetailsPage;
+
 }
 
 const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
-    console.log(props.project.link);
 
     return (
         <>
@@ -66,14 +68,13 @@ const ProjectDetailsPage: NextPage<ProjectDetailsPageProps> = (props) => {
                     </Column>
                 </Row>
             </Section>
-            <Paginator title={props.project.title} />
-            <Section>
-                <Row>
-                    <H2>Interested in doing a project together?</H2>
-                    <Divider />
-                    <Button variant="secondary"> Contact me</Button>
-                </Row>
-            </Section>
+            <Paginator
+                prevProjectTitle={props.project.prevProjectTitle}
+                nextProjectTitle={props.project.nextProjectTitle}
+                prevProjectId={props.project.prevProjectId}
+                nextProjectId={props.project.nextProjectId}
+            />
+
 
         </>
     );
@@ -95,7 +96,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 export async function getStaticPaths() {
     const projects = await fetchProjects();
     const paths = projects.map(({ id }) => ({ params: { id: id.toString() } }));
-    // console.log("PATHS", paths);
+
     return {
         paths,
         fallback: false,

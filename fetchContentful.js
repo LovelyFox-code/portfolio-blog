@@ -31,7 +31,7 @@ export async function fetchPortfolioPageContent() {
 
 export async function fetchProjects() {
   const entries = await client.getEntries({ content_type: "project" });
-  console.log("ENTRIES", entries.items);
+  console.log("ENTRY", entries.fields);
   const projects = entries.items.map((project) => {
     return {
       title: project.fields.title,
@@ -57,5 +57,9 @@ export async function fetchProjectById(id) {
     previewImg: entry.fields.staticPreview[0].fields.file.url,
     previewImage: entry.fields.staticPreview[1].fields.file.url,
     link: entry.fields.visitWebsite,
+    prevProjectTitle: entry.fields.previousProject.fields.title,
+    prevProjectId: entry.fields.previousProject.sys.id,
+    nextProjectTitle: entry.fields.nextProject.fields.title,
+    nextProjectId: entry.fields.nextProject.sys.id,
   };
 }

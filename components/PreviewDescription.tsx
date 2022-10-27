@@ -3,6 +3,7 @@ import React, { Children } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import { GrayishDarkBlue } from "./Common/Colors";
+import { mediaQueriesMax, mediaQueriesMin } from "./Common/media";
 import { H1, P } from "./Common/Typography";
 interface IPreviewDescription {
     title: string;
@@ -13,14 +14,15 @@ interface IPreviewDescription {
     id: string;
 }
 export const Description = styled.div`
-    width: 80%;
+    width: 90%;
     margin: auto;
+    max-width: 100%;
+    ${mediaQueriesMax("tablet")`
+    width: 95%;
+  `};
 `
-export const Divider = styled.hr`
-  width: 350px;
+export const Divider = styled.div`
   height: 1px;
-  left: 830px;
-  top: 190px;
   background: ${GrayishDarkBlue};
   mix-blend-mode: normal;
   opacity: 0.15;

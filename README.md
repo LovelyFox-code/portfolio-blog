@@ -2,8 +2,6 @@
 
 Took the design from Frontent Mentor as a inspiration for my portfolio website.
 
-# [Markdown editor](https://in-browser-markdown-editor-by-fox.netlify.app/)
-
 ### Converting Figma design with `Next.js`, `TypeScript`, `styled-components`, `Contentful`.
 
 My goals were:
@@ -15,15 +13,11 @@ My goals were:
 - Apply and use TypeScript;
 - Use Contentful as a CMS
 
-### Design preview!
-
-![Preview image]()
-
 ### The challenge
 
 ### Screenshot so far!
 
-![Preview image]()
+![Preview image](/public/images/PreviewResume.png)
 
 ### Built with
 
@@ -31,7 +25,6 @@ My goals were:
 - CSS custom properties
 - Flex-box
 - CSS Grid
-- Mobile-first workflow
 - [Next.js](https://nextjs.org/) - Next.js
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript
 - [Styled Components](https://styled-components.com/) - For styles
