@@ -10,10 +10,8 @@ export const Nav = styled.nav`
   margin: auto;
   display: flex;
   justify-content: space-between;
-  margin-top: 10%;
-  ${mediaQueriesMin("tablet")`
-        margin-top: 5%;
-  `};
+  margin-top: 5%;
+ 
 `;
 export const Logo = styled.div`
 height: 70px;
