@@ -12,7 +12,7 @@ const transport = nodemailer.createTransport({
   },
 });
 
-function sendEmail(emailAdress, subject, emailContent) {
+export function sendEmail(emailAdress, subject, emailContent) {
   transport.sendMail(
     {
       from: process.env.SMTP_SENDER,
@@ -29,9 +29,5 @@ function sendEmail(emailAdress, subject, emailContent) {
     }
   );
 }
-const email = `
-    <html>
-    <h1 style="background-color: 'red'">Test </h1>
-    </html>
-`;
-sendEmail("alinadakhno60@gmail.com", "Testing email with JS", email);
+
+// sendEmail("alinadakhno60@gmail.com", "Testing email with JS", email);

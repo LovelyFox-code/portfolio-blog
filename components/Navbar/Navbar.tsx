@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { GrayishDarkBlue, VeryLightGray } from "../Common/Colors";
-import { mediaQueriesMax } from "../Common/media";
+import { mediaQueriesMax, mediaQueriesMin } from "../Common/media";
 
 export const Nav = styled.nav`
   width: 90%;
@@ -11,6 +11,9 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   margin-top: 10%;
+  ${mediaQueriesMin("tablet")`
+        margin-top: 5%;
+  `};
 `;
 export const Logo = styled.div`
 height: 70px;

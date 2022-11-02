@@ -20,13 +20,10 @@ export const FormGroup = styled.div`
 	width: 100%;
 	
 `;
-
 export const Label = styled.label`
 	color: ${GrayishDarkBlue};
     display: block;
 `;
-
-
 export const Input = styled.input`
 	padding: 9px 16px;
 	color: ${GrayishDarkBlue};
@@ -53,14 +50,12 @@ const Form: React.FC<IForm> = (props) => {
                 <Input placeholder="Jane Appleseed" required value={props.values.firstname}
                     onChange={(event) => props.updateValues({ ...props.values, firstname: event.target.value })}
                 />
-
             </FormGroup>
             <FormGroup>
                 <Label>Email Address</Label>
                 <Input placeholder="email@example.com" value={props.values.email}
                     onChange={(event) => props.updateValues({ ...props.values, email: event.target.value })}
                 />
-
             </FormGroup>
             <FormGroup>
                 <Label>Message</Label>

@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { json } from "stream/consumers"
 import styled from "styled-components"
 import Button from "../components/Button"
 import { H1 } from "../components/Common/Typography"
 import Form from "../components/ContactForm"
+// import { sendEmail } from "../sendEmail"
 
 export const FormWraper = styled.form`
     width: 300px;
