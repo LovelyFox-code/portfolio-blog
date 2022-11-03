@@ -105,6 +105,7 @@ const ContactPage = () => {
             }
 
         })}>
+            <H1>Get in touch</H1>
             <Label htmlFor="label">Name</Label>
             <Input {...register("name", { required: 'This field is required' })} placeholder="name" />
             <Error>{errors.name?.message}</Error>
