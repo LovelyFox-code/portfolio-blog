@@ -29,5 +29,3 @@ export function sendEmail(emailAdress, subject, emailContent) {
     }
   );
 }
-
-// sendEmail("alinadakhno60@gmail.com", "Testing email with JS", email);
