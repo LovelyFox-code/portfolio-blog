@@ -1,5 +1,5 @@
 
-export const emailHTML = `
+export const emailHTML = (name: string) => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +86,7 @@ export const emailHTML = `
         </header>
 
         <div class="one-col">
-            <h1>Thanks for visiting my website </h1>
+            <h1>Thanks for visiting my website ${name} </h1>
             <div id="banner">
             <img src="https://images.ctfassets.net/of7l7vtgqjoa/29VmoJudj3n5HGiV7lasG3/92673a75bf8a5b7e36413e1d1a5b8886/avel-chuklanov-DUmFLtMeAbQ-unsplash.jpg" alt="">
             </div>
