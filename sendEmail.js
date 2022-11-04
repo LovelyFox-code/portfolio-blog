@@ -13,6 +13,7 @@ const transport = nodemailer.createTransport({
 });
 
 export function sendEmail(emailAdress, subject, emailContent) {
+  console.log(emailContent);
   transport.sendMail(
     {
       from: process.env.SMTP_SENDER,
@@ -20,11 +21,11 @@ export function sendEmail(emailAdress, subject, emailContent) {
       subject: subject,
       html: emailContent,
     },
-    (err) => {
+    (err, info) => {
       if (err) {
         console.log("OH! NO! NO! NO! is an error!", err);
       } else {
-        console.log("Yeah!");
+        console.log("Yeah!", info);
       }
     }
   );

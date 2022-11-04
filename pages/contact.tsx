@@ -87,7 +87,7 @@ const ContactPage = () => {
             message: ""
         }
     });
-    console.log(errors);
+    console.log(errors, "this is error");
     return (
         <FormWraper onSubmit={handleSubmit(async (data) => {
             try {
