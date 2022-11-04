@@ -2,11 +2,8 @@ import { useState } from "react"
 import styled from "styled-components"
 import Button from "../components/Button"
 import { H1, P } from "../components/Common/Typography"
-import Form from "../components/ContactForm"
 import { useForm } from "react-hook-form"
 import { DarkBlue, GrayishDarkBlue, LightGray } from "../components/Common/Colors"
-import { mediaQueriesMax } from "../components/Common/media"
-import { request } from "http"
 
 export const FormWraper = styled.form`
     width: 300px;
