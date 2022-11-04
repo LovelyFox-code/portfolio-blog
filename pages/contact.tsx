@@ -94,12 +94,14 @@ const ContactPage = () => {
     return (
         <FormWraper onSubmit={handleSubmit(async (data) => {
             try {
+                //loading spinner should be
                 const response = await fetch("./api/contactForm", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data)
                 })
                 console.log(response);
+                //to do redirect or success msg
             } catch (error) {
 
             }
@@ -118,7 +120,7 @@ const ContactPage = () => {
             })} placeholder="email" />
             <Error>{errors.email?.message}</Error>
             <Label htmlFor="label">Message</Label>
-            <Input {...register("message")} placeholder="message" />
+            <TextArea {...register("message")} placeholder="message" />
             <Error>{errors.message?.message}</Error>
             <SubmitBtn type="submit" value="Submit" />
         </FormWraper>

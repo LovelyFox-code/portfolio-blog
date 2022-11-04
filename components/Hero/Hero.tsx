@@ -40,18 +40,7 @@ const Hero: React.FC<HeroProps> = (props) => {
             </HeroImgBox>
             <HeroContent>
                 <H1>Hey, I’m Alina and I love building beautiful websites</H1>
-                {/* <Button>
-                    <NestedBtn>
-                        <SVG xmlns="http://www.w3.org/2000/svg" width="16" height="14">
-                            <g fill="none" fillRule="evenodd" stroke="white">
-                                <path d="M0 9l8 4 8-4" />
-                                <path opacity=".7" d="M0 5l8 4 8-4" />
-                                <path opacity=".25" d="M0 1l8 4 8-4" />
-                            </g>
-                        </SVG>
-                    </NestedBtn>
-                    About me
-                </Button> */}
+
             </HeroContent>
         </HeroMain>
     );

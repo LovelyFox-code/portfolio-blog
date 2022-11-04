@@ -28,7 +28,7 @@ const dataEmail =`
   </html>
 `;
    console.log(req.body, req.method);
-    sendEmail(req.body.email, "Front-end", emailHTML);
+    sendEmail(req.body.email, "Front-end", emailHTML(req.body.name));
     receiveEmail("alinadakhno60@gmail.com", "Your site was visited", dataEmail);
   res.status(200).json({ name: 'John Doe' })
 }
