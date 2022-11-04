@@ -6,6 +6,7 @@ import PreviewImage from '../components/PreviewImage'
 import styled from 'styled-components'
 import Hero from '../components/Hero/Hero'
 import { fetchHomePageContent } from '../fetchContentful'
+import CTAsection from '../components/CTAsection'
 
 export const Container = styled.section`
 
@@ -54,7 +55,7 @@ const Home: NextPage<HomePageProps> = (props) => {
           </Column>
         </Row>
       </Section>
-
+      <CTAsection />
     </Container>
 
   )
