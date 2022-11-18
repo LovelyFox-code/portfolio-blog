@@ -100,6 +100,7 @@ const Button = styled.button<IButton>`
   text-transform: uppercase;
     &:hover{
         background-color: white;
+        border: 1px solid ${DarkBlue}
         color: ${DarkBlue};
     }
     ${mediaQueriesMax("tablet")`
