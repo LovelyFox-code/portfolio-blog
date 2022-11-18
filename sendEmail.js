@@ -22,13 +22,13 @@ export async function sendEmail(emailAdress, subject, emailContent) {
       to: emailAdress,
       subject: subject,
       html: emailContent,
-    },
-    (err, info) => {
-      if (err) {
-        console.log("OH! NO! NO! NO! is an error!", err);
-      } else {
-        console.log("Yeah!", info);
-      }
     }
+    // (err, info) => {
+    //   if (err) {
+    //     console.log("OH! NO! NO! NO! is an error!", err);
+    //   } else {
+    //     console.log("Yeah!", info);
+    //   }
+    // }
   );
 }

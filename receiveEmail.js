@@ -19,13 +19,13 @@ export async function receiveEmail(emailAdress, subject, emailContent) {
       to: emailAdress,
       subject: subject,
       html: emailContent,
-    },
-    (err) => {
-      if (err) {
-        console.log("OH! NO! NO! NO! is an error!", err);
-      } else {
-        console.log("Yeah!");
-      }
     }
+    //   (err) => {
+    //     if (err) {
+    //       console.log("OH! NO! NO! NO! is an error!", err);
+    //     } else {
+    //       console.log("Yeah!");
+    //     }
+    //   }
   );
 }

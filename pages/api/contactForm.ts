@@ -3,7 +3,7 @@ import {sendEmail} from "../../sendEmail"
 import {receiveEmail} from "../../receiveEmail"
 import {emailHTML} from "../../components/EmailHTML"
 type Data = {
-  name: string
+  message: string
 }
 
 export default async function handler(
@@ -19,7 +19,17 @@ const dataEmail =`
     <p>${req.body.message}</p>
   </html>
 `;
-    await sendEmail(req.body.email, "Front-end", emailHTML(req.body.name));
-    await receiveEmail("alinadakhno60@gmail.com", "Your site was visited", dataEmail);
-  res.status(200).json({ name: 'John Doe' })
+try {
+  const info = await sendEmail(req.body.email, "Front-end", emailHTML(req.body.name));
+  console.log(info);
+  
+  const info2 = await receiveEmail("alinadakhno60@gmail.com", "Your site was visited", dataEmail);
+  console.log(info2);
+ res.status(200).json({ message: 'Email sent' })
+} catch (error) {
+  console.log(error);
+  res.status(500).json({message: "Something went wrong"})
+  
+}
+
 }
