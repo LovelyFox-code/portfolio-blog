@@ -1,6 +1,5 @@
 import { useState } from "react"
 import styled from "styled-components"
-import Button from "../components/Button"
 import { H1, P } from "../components/Common/Typography"
 import { useForm } from "react-hook-form"
 import { DarkBlue, GrayishDarkBlue, LightGray } from "../components/Common/Colors"
