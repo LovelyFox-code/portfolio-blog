@@ -12,9 +12,11 @@ const transport = nodemailer.createTransport({
   },
 });
 
-export function sendEmail(emailAdress, subject, emailContent) {
+export async function sendEmail(emailAdress, subject, emailContent) {
   console.log(emailContent);
-  transport.sendMail(
+  console.log(process.env);
+  console.log(process.env.SMTP_PASSWORD);
+  await transport.sendMail(
     {
       from: process.env.SMTP_SENDER,
       to: emailAdress,
