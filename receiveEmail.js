@@ -12,8 +12,8 @@ const transport = nodemailer.createTransport({
   },
 });
 
-export function receiveEmail(emailAdress, subject, emailContent) {
-  transport.sendMail(
+export async function receiveEmail(emailAdress, subject, emailContent) {
+  return transport.sendMail(
     {
       from: process.env.SMTP_SENDER,
       to: emailAdress,

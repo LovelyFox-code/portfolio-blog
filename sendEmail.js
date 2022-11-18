@@ -16,7 +16,7 @@ export async function sendEmail(emailAdress, subject, emailContent) {
   console.log(emailContent);
   console.log(process.env);
   console.log(process.env.SMTP_PASSWORD);
-  await transport.sendMail(
+  return await transport.sendMail(
     {
       from: process.env.SMTP_SENDER,
       to: emailAdress,

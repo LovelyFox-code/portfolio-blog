@@ -6,7 +6,7 @@ type Data = {
   name: string
 }
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
@@ -19,7 +19,7 @@ const dataEmail =`
     <p>${req.body.message}</p>
   </html>
 `;
-    sendEmail(req.body.email, "Front-end", emailHTML(req.body.name));
-    receiveEmail("alinadakhno60@gmail.com", "Your site was visited", dataEmail);
+    await sendEmail(req.body.email, "Front-end", emailHTML(req.body.name));
+    await receiveEmail("alinadakhno60@gmail.com", "Your site was visited", dataEmail);
   res.status(200).json({ name: 'John Doe' })
 }
