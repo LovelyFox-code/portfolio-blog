@@ -1,10 +1,17 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components';
+import { mediaQueriesMin } from './Common/media';
 
 export const SpinnerContainer = styled.div`
-    position: absolute;
-    top: 20%;
-    right: 40%;
+position: absolute;
+left: 50%;
+-webkit-transform: translateX(-50%);
+transform: translateX(-50%);
+top: 20%;
+${mediaQueriesMin("tablet")`
+    top: 30%;
+  `};
+
 `
 export const animation = keyframes`
   0% {
@@ -26,11 +33,11 @@ export const Spinner = styled.div`
 
 
 const LoadingSpinner = () => {
-    return (
-        <SpinnerContainer>
-            <Spinner />
-        </SpinnerContainer>
-    )
+  return (
+    <SpinnerContainer>
+      <Spinner />
+    </SpinnerContainer>
+  )
 }
 
 export default LoadingSpinner
